@@ -1,0 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	background-size: cover;
+	background-image: url(bureau-fond-d-ecran-1920x1200_6.jpg);
+	background-repeat: no-repeat;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ header, form{
+	 min-height: 20vh;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+
+ }
+
+ h1{
+	 font-size: 5rem;
+	 color: white;
+ }
+
+ form input, form button{
+	 padding : 0.5rem;
+	 font-size: 2rem;
+	 border : none;
+	 background: white;
+ }
+
+ form button {
+	 color : rgb(8, 184, 31);
+	 background: rgb(97, 126, 252);
+	 cursor: pointer;
+	 transition: all 0.3s ease;
+ }
+
+ form button:hover {
+	 background: blue;
+	 color: yellow;
+ }
+
+ .button{
+	 min-height: 20vh;
+	 display: flex;
+	 justify-content: center;
+ }
+
+
+.todo-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-list{
+	min-width: 30%;
+	list-style: none;
+}
+
+.todo{
+	margin: 0.5rem;
+	background: white;
+	color: black;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 1s ease;
+}
+
+.todo li{
+	flex: 1;
+}
+.complete-btn, .trash-btn{
+	background: greenyellow;
+	color: black;
+	padding: 1rem;
+	border: none;
+	cursor: pointer;
+	font-size: 1.5rem;
+}
+
+.trash-btn{
+	background: red;
+}
+
+.complete-btn:hover{
+	background: rgb(187, 245, 195);
+}
+
+.trash-btn:hover{
+	background: rgb(252, 113, 113);
+}
+
+.fa-trash, .fa-check{
+	pointer-events: none;
+}
+
+.completed{
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.fall{  /* CETTE EFFET PERMET DE FAIRE UNE ROTATION DE LA DIV */
+	transform: translateY(8rem) rotateZ(20deg);
+	opacity: 0;
+}
+/*POUR MODIFIER LE SELECTOR OU FILTRE*/
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+.select{
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+select{
+	color:rgb(97, 126, 252);
+	width: 10rem;
+	cursor: pointer;
+	padding: 1rem;
+	font-family: 'Poppins', sans-serif;
+}
+ 
+.select::after{
+	content: "\25BC";
+	position: absolute;
+	background-color: rgb(97, 126, 252);;
+	top: 0;
+	right: 0;
+	padding: 1rem;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+
+.select:hover::after{
+	background: white;
+	color: rgb(97, 126, 252);
+}
+.nav-barre{
+	background-color: rgba(169, 169, 169, 0.637);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	height: 60px;
+	width: 100%;
+}
